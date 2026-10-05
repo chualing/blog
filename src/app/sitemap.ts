@@ -6,7 +6,10 @@ import { getAllWorksMeta } from '@/lib/content/getWorks'
 /**
  * sitemap.xml 自动生成。
  * 静态主路由 + 动态抓取 posts/works 的 mdx 内容页，全站静态预渲染地址一并纳入。
+ * output: export 静态导出下需显式声明为静态。
  */
+export const dynamic = 'force-static'
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: `${siteConfig.url}/`, lastModified: new Date(), priority: 1, changeFrequency: 'weekly' },
