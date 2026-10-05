@@ -1,0 +1,36 @@
+---
+title: 3D 模型展示 Demo
+description: 演示 Three.js 模型加载、媒体组件与 MUI / 自定义组件在作品详情中的使用。
+date: 2026-10-02
+tags:
+  - Three.js
+  - Demo
+tech:
+  - Next.js
+  - Three.js
+  - Tailwind CSS
+---
+
+这是一个用于验证能力链路的演示作品，涵盖 3D 模型、媒体资源与组件嵌入。
+
+## 3D 模型
+
+下方为 Three.js 模型查看组件，客户端动态加载并附加旋转与轨道控制。
+
+<ModelViewer src="/models/sample.glb" alt="示例模型" />
+
+<Callout type="warning" title="说明">
+  示例模型文件位于 public/models 目录。替换 src 即可展示你自己的 glb/gltf 模型。
+</Callout>
+
+## 图片展示
+
+<OptimizedImage src="/media/sample-img.png" alt="示例图片" width={640} height={360} />
+
+## 音频与视频
+
+音频与视频均按需加载，不会阻塞首屏。
+
+<AudioPlayer src="/media/sample-audio.mp3" title="示例音频" />
+
+<VideoPlayer src="/media/sample-video.mp4" title="示例视频" />

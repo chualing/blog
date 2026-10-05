@@ -1,0 +1,41 @@
+---
+title: 你好，世界
+description: 第一篇示例博客文章，演示 Markdown 语法、代码高亮与组件嵌入。
+date: 2026-10-01
+tags:
+  - 入门
+  - Next.js
+---
+
+这是我的第一篇示例文章。它演示了本站内容渲染引擎的能力：标准 Markdown、代码高亮、内嵌 MUI 与自定义 Tailwind 组件。
+
+<Callout type="info" title="提示">
+  这是基于 Tailwind 的自定义组件，可以在任何 mdx 文档内直接使用。
+</Callout>
+
+## 代码高亮
+
+```ts
+export function greet(name: string): string {
+  return `Hello, ${name}`
+}
+```
+
+## 引用与列表
+
+> 简洁、稳健、统一的设计语言，是内容型网站的核心。
+
+- 支持无序列表
+- 支持有序列表
+- 支持任务列表 [x] 已完成项
+
+| 特性 | 支持情况 |
+| --- | --- |
+| GFM 表格 | 支持 |
+| 代码高亮 | 支持 |
+
+## 内嵌 MUI 组件
+
+<Button variant="contained" color="primary">
+  这是一个 MUI 按钮
+</Button>
