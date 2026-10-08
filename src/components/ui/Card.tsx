@@ -18,10 +18,10 @@ interface UiCardProps {
 export default function UiCard({ href, title, description, tags = [] }: UiCardProps) {
   return (
     <Link href={href} className="block h-full no-underline">
-      <div className="card-lift h-full rounded-2xl border border-black/[0.08] bg-white/70 p-6 transition-colors hover:border-brand-500/25 hover:bg-white/90">
-        <p className="mb-2 text-[17px] font-semibold tracking-tight text-ink">{title}</p>
+      <div className="card-lift hover:border-brand-500/25 h-full rounded-2xl border border-black/[0.08] bg-white/70 p-6 transition-colors hover:bg-white/90">
+        <p className="text-ink mb-2 text-[17px] font-semibold tracking-tight">{title}</p>
         {description && (
-          <p className="mb-4 line-clamp-2 text-[13px] leading-relaxed text-slate-soft">
+          <p className="text-slate-soft mb-4 line-clamp-2 text-[13px] leading-relaxed">
             {description}
           </p>
         )}
@@ -30,7 +30,7 @@ export default function UiCard({ href, title, description, tags = [] }: UiCardPr
             {tags.map((tag) => (
               <span
                 key={tag}
-                className="rounded-full bg-brand-50 px-2.5 py-1 text-[11px] font-medium text-brand-600"
+                className="bg-brand-50 text-brand-600 rounded-full px-2.5 py-1 text-[11px] font-medium"
               >
                 {tag}
               </span>

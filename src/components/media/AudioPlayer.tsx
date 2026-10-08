@@ -25,13 +25,7 @@ export default function AudioPlayer({ src, title }: AudioPlayerProps) {
   return (
     <div className="my-4">
       {title && <p className="mb-2 text-sm font-medium text-slate-700">{title}</p>}
-      <audio
-        controls
-        preload="none"
-        src={src}
-        onError={() => setError(true)}
-        className="w-full"
-      >
+      <audio controls preload="none" src={src} onError={() => setError(true)} className="w-full">
         当前浏览器不支持音频播放。
       </audio>
     </div>

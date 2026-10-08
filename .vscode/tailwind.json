@@ -1,0 +1,16 @@
+{
+  "version": 1.1,
+  "atDirectives": [
+    { "name": "@theme", "description": "Tailwind CSS v4 theme token definition block" },
+    { "name": "@layer", "description": "Tailwind CSS cascade layer (base, components, utilities)" },
+    { "name": "@apply", "description": "Inline apply Tailwind utility classes" },
+    { "name": "@source", "description": "Register additional content paths for class scanning (v4)" },
+    { "name": "@plugin", "description": "Register a Tailwind CSS plugin" },
+    { "name": "@config", "description": "Specify a Tailwind CSS config file path" },
+    { "name": "@variant", "description": "Define a custom variant (v4)" },
+    { "name": "@utility", "description": "Define a custom utility (v4)" },
+    { "name": "@custom-variant", "description": "Define a custom variant (v4)" },
+    { "name": "@reference", "description": "Reference another stylesheet for utilities without emitting CSS (v4)" }
+  ],
+  "properties": []
+}

@@ -33,7 +33,9 @@ export function getAllPostsMeta(): ArticleMeta[] {
 }
 
 /** 按 slug 读取单篇文章的 mdx 源内容（服务端专用）。返回 null 表示不存在。 */
-export async function getPostBySlug(slug: string): Promise<ArticleMeta & { content: string } | null> {
+export async function getPostBySlug(
+  slug: string,
+): Promise<(ArticleMeta & { content: string }) | null> {
   const filePath = path.join(POSTS_DIR, `${slug}.mdx`)
   try {
     const fileContent = await fs.readFile(filePath, 'utf-8')

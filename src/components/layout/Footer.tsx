@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-black/5 py-8">
       <div className="mx-auto w-full max-w-6xl px-5 text-center">
-        <p className="text-[12px] text-slate-soft">
+        <p className="text-slate-soft text-[12px]">
           © {year} {siteConfig.author} · {siteConfig.name}
         </p>
       </div>

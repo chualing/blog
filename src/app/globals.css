@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "highlight.js/styles/github.css";
+@import 'tailwindcss';
+@import 'highlight.js/styles/github.css';
 
 /*
  * Tailwind CSS v4 主题 token。
@@ -17,8 +17,8 @@
   --color-brand-50: #e8f1ff;
   --color-accent-500: #2997ff;
   --font-sans:
-    "SF Pro Display", "Inter", "PingFang SC", "Microsoft YaHei",
-    "Helvetica Neue", Helvetica, Arial, sans-serif;
+    'SF Pro Display', 'Inter', 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial,
+    sans-serif;
 
   --animate-fade-in-up: fade-in-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
   --animate-fade-in: fade-in 0.7s ease-out both;
@@ -86,16 +86,8 @@ body {
   background-color: var(--color-fog);
   /* 极简高级的呼吸感：顶部一抹微光 + 全屏柔和径向渐变 */
   background-image:
-    radial-gradient(
-      60rem 30rem at 50% -10%,
-      rgba(0, 113, 227, 0.08),
-      transparent 60%
-    ),
-    radial-gradient(
-      40rem 24rem at 100% 0%,
-      rgba(41, 151, 255, 0.06),
-      transparent 60%
-    );
+    radial-gradient(60rem 30rem at 50% -10%, rgba(0, 113, 227, 0.08), transparent 60%),
+    radial-gradient(40rem 24rem at 100% 0%, rgba(41, 151, 255, 0.06), transparent 60%);
   background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -151,12 +143,7 @@ a {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  background-image: linear-gradient(
-    120deg,
-    #0062c4 0%,
-    #2997ff 60%,
-    #7aa9ff 100%
-  );
+  background-image: linear-gradient(120deg, #0062c4 0%, #2997ff 60%, #7aa9ff 100%);
 }
 
 /* ---------- 滚动显现（由客户端 Reveal 组件切换 is-visible） ---------- */
@@ -168,13 +155,13 @@ a {
     transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
   will-change: opacity, transform;
 }
-.reveal[data-direction="left"] {
+.reveal[data-direction='left'] {
   transform: translateX(-28px);
 }
-.reveal[data-direction="right"] {
+.reveal[data-direction='right'] {
   transform: translateX(28px);
 }
-.reveal[data-direction="none"] {
+.reveal[data-direction='none'] {
   transform: none;
 }
 .reveal.is-visible {

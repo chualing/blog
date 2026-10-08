@@ -32,7 +32,9 @@ export function getAllWorksMeta(): WorkMeta[] {
 }
 
 /** 按 slug 读取单个作品的 mdx 源内容（服务端专用）。返回 null 表示不存在。 */
-export async function getWorkBySlug(slug: string): Promise<WorkMeta & { content: string } | null> {
+export async function getWorkBySlug(
+  slug: string,
+): Promise<(WorkMeta & { content: string }) | null> {
   const filePath = path.join(WORKS_DIR, `${slug}.mdx`)
   try {
     const fileContent = await fs.readFile(filePath, 'utf-8')

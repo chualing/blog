@@ -42,16 +42,18 @@ export default function ImageGallery({
     { src: src1, alt: alt1 },
     { src: src2, alt: alt2 },
     { src: src3, alt: alt3 },
-  ].filter(
-    (item): item is { src: string; alt: string | undefined } =>
-      typeof item.src === 'string'
-  )
+  ].filter((item): item is { src: string; alt: string | undefined } => typeof item.src === 'string')
 
   return (
     <div className={`my-6 flex flex-wrap justify-center gap-4 ${className}`}>
       {sources.map((item, index) => (
         <figure key={item.src} className="m-0" style={{ width: w, height: h }}>
-          <OptimizedImage src={item.src} alt={item.alt ?? `作品图 ${index + 1}`} width={w} height={h} />
+          <OptimizedImage
+            src={item.src}
+            alt={item.alt ?? `作品图 ${index + 1}`}
+            width={w}
+            height={h}
+          />
         </figure>
       ))}
     </div>

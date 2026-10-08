@@ -13,9 +13,24 @@ export const dynamic = 'force-static'
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: `${siteConfig.url}/`, lastModified: new Date(), priority: 1, changeFrequency: 'weekly' },
-    { url: `${siteConfig.url}/about`, lastModified: new Date(), priority: 0.6, changeFrequency: 'monthly' },
-    { url: `${siteConfig.url}/blog`, lastModified: new Date(), priority: 0.7, changeFrequency: 'weekly' },
-    { url: `${siteConfig.url}/works`, lastModified: new Date(), priority: 0.7, changeFrequency: 'weekly' },
+    {
+      url: `${siteConfig.url}/about`,
+      lastModified: new Date(),
+      priority: 0.6,
+      changeFrequency: 'monthly',
+    },
+    {
+      url: `${siteConfig.url}/blog`,
+      lastModified: new Date(),
+      priority: 0.7,
+      changeFrequency: 'weekly',
+    },
+    {
+      url: `${siteConfig.url}/works`,
+      lastModified: new Date(),
+      priority: 0.7,
+      changeFrequency: 'weekly',
+    },
   ]
 
   const postRoutes: MetadataRoute.Sitemap = getAllPostsMeta().map((post) => ({

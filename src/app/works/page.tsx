@@ -19,15 +19,15 @@ export default function WorksListPage() {
   return (
     <div className="mx-auto w-full max-w-6xl px-5 py-20 md:py-24">
       <Reveal direction="none">
-        <p className="text-[12px] font-medium uppercase tracking-[0.2em] text-brand-600">Works</p>
-        <h1 className="mt-4 text-4xl font-semibold tracking-tight text-ink md:text-5xl">作品集</h1>
-        <p className="mt-4 max-w-xl text-[15px] text-slate-soft">
+        <p className="text-brand-600 text-[12px] font-medium tracking-[0.2em] uppercase">Works</p>
+        <h1 className="text-ink mt-4 text-4xl font-semibold tracking-tight md:text-5xl">作品集</h1>
+        <p className="text-slate-soft mt-4 max-w-xl text-[15px]">
           一些我做过并为之骄傲的实践与创意项目。
         </p>
       </Reveal>
 
       {works.length === 0 ? (
-        <p className="mt-12 text-slate-soft">暂无作品。</p>
+        <p className="text-slate-soft mt-12">暂无作品。</p>
       ) : (
         <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {works.map((work, index) => (

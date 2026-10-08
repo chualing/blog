@@ -43,14 +43,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   return (
     <article className="mx-auto w-full max-w-3xl px-5 py-20 md:py-24">
       <header className="mb-10">
-        <p className="animate-fade-in-up text-[12px] font-medium uppercase tracking-[0.2em] text-brand-600">
+        <p className="animate-fade-in-up text-brand-600 text-[12px] font-medium tracking-[0.2em] uppercase">
           Blog
         </p>
-        <h1 className="animate-fade-in-up mt-4 text-3xl font-semibold tracking-tight text-ink [animation-delay:120ms] md:text-5xl">
+        <h1 className="animate-fade-in-up text-ink mt-4 text-3xl font-semibold tracking-tight [animation-delay:120ms] md:text-5xl">
           {post.title}
         </h1>
         <div className="animate-fade-in-up mt-5 flex items-center gap-3 [animation-delay:240ms]">
-          <span className="text-[13px] text-slate-soft">
+          <span className="text-slate-soft text-[13px]">
             {new Date(post.date).toLocaleDateString('zh-CN')}
           </span>
           {post.tags && post.tags.length > 0 && (
@@ -58,7 +58,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               {post.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="rounded-full bg-brand-50 px-2.5 py-1 text-[11px] font-medium text-brand-600"
+                  className="bg-brand-50 text-brand-600 rounded-full px-2.5 py-1 text-[11px] font-medium"
                 >
                   {tag}
                 </span>

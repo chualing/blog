@@ -18,10 +18,7 @@ export default function Header() {
   return (
     <header className="glass sticky top-0 z-50 border-b border-black/5">
       <div className="mx-auto flex h-14 w-full max-w-6xl items-center justify-between px-5">
-        <Link
-          href="/"
-          className="text-[17px] font-semibold tracking-tight text-ink no-underline"
-        >
+        <Link href="/" className="text-ink text-[17px] font-semibold tracking-tight no-underline">
           {siteConfig.author}
         </Link>
         <nav className="flex items-center gap-6 md:gap-8">
@@ -29,7 +26,7 @@ export default function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-[13px] font-normal text-slate-soft no-underline transition-colors hover:text-ink"
+              className="text-slate-soft hover:text-ink text-[13px] font-normal no-underline transition-colors"
             >
               {item.label}
             </Link>

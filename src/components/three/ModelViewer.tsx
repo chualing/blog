@@ -131,9 +131,7 @@ export default function ModelViewer({ src, alt, autoRotate = true, className }: 
   return (
     <div className={className ?? 'my-4'}>
       <div ref={mountRef} className="h-80 w-full" role="img" aria-label={alt} />
-      {status === 'loading' && (
-        <p className="mt-2 text-sm text-slate-500">模型加载中…</p>
-      )}
+      {status === 'loading' && <p className="mt-2 text-sm text-slate-500">模型加载中…</p>}
       {status === 'error' && (
         <p role="alert" className="mt-2 rounded-lg bg-red-50 px-4 py-3 text-sm text-red-600">
           模型加载失败，请稍后重试。

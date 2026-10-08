@@ -27,34 +27,34 @@ export default function HomePage() {
       <section className="relative overflow-hidden">
         <div
           aria-hidden
-          className="pointer-events-none absolute -top-32 left-1/2 -z-10 h-[28rem] w-[48rem] -translate-x-1/2 rounded-full bg-brand-500/10 blur-3xl animate-float-slow"
+          className="bg-brand-500/10 animate-float-slow pointer-events-none absolute -top-32 left-1/2 -z-10 h-[28rem] w-[48rem] -translate-x-1/2 rounded-full blur-3xl"
         />
         <div
           aria-hidden
-          className="pointer-events-none absolute top-40 -right-24 -z-10 h-72 w-72 rounded-full bg-accent-500/10 blur-3xl animate-float"
+          className="bg-accent-500/10 animate-float pointer-events-none absolute top-40 -right-24 -z-10 h-72 w-72 rounded-full blur-3xl"
         />
         <div className="mx-auto w-full max-w-4xl px-5 pt-28 pb-24 text-center md:pt-36 md:pb-32">
-          <p className="animate-fade-in-up text-[13px] font-medium uppercase tracking-[0.22em] text-brand-600">
+          <p className="animate-fade-in-up text-brand-600 text-[13px] font-medium tracking-[0.22em] uppercase">
             设计师 · 开发者 · 创作者
           </p>
-          <h1 className="animate-fade-in-up mt-6 text-5xl font-semibold tracking-tight text-ink [animation-delay:120ms] md:text-7xl">
+          <h1 className="animate-fade-in-up text-ink mt-6 text-5xl font-semibold tracking-tight [animation-delay:120ms] md:text-7xl">
             你好，我是
             <br className="hidden md:block" />
             <span className="text-gradient">{siteConfig.author}</span>
           </h1>
-          <p className="animate-fade-in-up mx-auto mt-7 max-w-2xl text-lg leading-relaxed text-slate-soft [animation-delay:240ms]">
+          <p className="animate-fade-in-up text-slate-soft mx-auto mt-7 max-w-2xl text-lg leading-relaxed [animation-delay:240ms]">
             用简洁优雅的界面与流畅的动效，讲述技术与创意的故事。这里是我的技术思考与作品集。
           </p>
           <div className="animate-fade-in-up mt-10 flex flex-wrap items-center justify-center gap-4 [animation-delay:360ms]">
             <Link
               href="/works"
-              className="rounded-full bg-brand-500 px-7 py-3 text-sm font-medium text-white no-underline transition-all hover:bg-brand-600 hover:shadow-xl hover:shadow-brand-500/30"
+              className="bg-brand-500 hover:bg-brand-600 hover:shadow-brand-500/30 rounded-full px-7 py-3 text-sm font-medium text-white no-underline transition-all hover:shadow-xl"
             >
               查看作品集
             </Link>
             <Link
               href="/about"
-              className="glass rounded-full px-7 py-3 text-sm font-medium text-ink no-underline transition-colors hover:bg-white/80"
+              className="glass text-ink rounded-full px-7 py-3 text-sm font-medium no-underline transition-colors hover:bg-white/80"
             >
               关于我
             </Link>
@@ -67,14 +67,14 @@ export default function HomePage() {
         <Reveal>
           <div className="mb-10 flex items-end justify-between">
             <div>
-              <p className="text-[12px] font-medium uppercase tracking-[0.2em] text-brand-600">
+              <p className="text-brand-600 text-[12px] font-medium tracking-[0.2em] uppercase">
                 最新文章
               </p>
-              <h2 className="mt-2 text-3xl font-semibold tracking-tight text-ink">Latest Posts</h2>
+              <h2 className="text-ink mt-2 text-3xl font-semibold tracking-tight">Latest Posts</h2>
             </div>
             <Link
               href="/blog"
-              className="text-sm font-medium text-brand-600 no-underline transition-colors hover:text-brand-500"
+              className="text-brand-600 hover:text-brand-500 text-sm font-medium no-underline transition-colors"
             >
               查看全部
             </Link>
@@ -99,16 +99,16 @@ export default function HomePage() {
         <Reveal>
           <div className="mb-10 flex items-end justify-between">
             <div>
-              <p className="text-[12px] font-medium uppercase tracking-[0.2em] text-brand-600">
+              <p className="text-brand-600 text-[12px] font-medium tracking-[0.2em] uppercase">
                 精选作品
               </p>
-              <h2 className="mt-2 text-3xl font-semibold tracking-tight text-ink">
+              <h2 className="text-ink mt-2 text-3xl font-semibold tracking-tight">
                 Selected Works
               </h2>
             </div>
             <Link
               href="/works"
-              className="text-sm font-medium text-brand-600 no-underline transition-colors hover:text-brand-500"
+              className="text-brand-600 hover:text-brand-500 text-sm font-medium no-underline transition-colors"
             >
               查看全部
             </Link>

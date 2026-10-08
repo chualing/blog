@@ -1,19 +1,19 @@
-import type { Metadata } from "next";
-import Reveal from "@/components/ui/Reveal";
-import { buildPageMeta } from "@/lib/seo/meta";
+import type { Metadata } from 'next'
+import Reveal from '@/components/ui/Reveal'
+import { buildPageMeta } from '@/lib/seo/meta'
 
 export const metadata: Metadata = buildPageMeta({
-  title: "关于我",
-  path: "/about",
-});
+  title: '关于我',
+  path: '/about',
+})
 
 /** 技能栈分组，便于卡片化呈现 */
 const skillGroups: Array<{ title: string; items: string[] }> = [
   {
-    title: "前端",
-    items: ["Next.js / React", "TypeScript", "Tailwind CSS / MUI", "Three.js"],
+    title: '前端',
+    items: ['Next.js / React', 'TypeScript', 'Tailwind CSS / MUI', 'Three.js'],
   },
-];
+]
 
 /**
  * 关于我页面（SSG）。
@@ -23,20 +23,20 @@ export default function AboutPage() {
   return (
     <>
       <section className="mx-auto w-full max-w-4xl px-5 pt-24 pb-16 text-center md:pt-32">
-        <p className="animate-fade-in-up text-[12px] font-medium uppercase tracking-[0.22em] text-brand-600">
+        <p className="animate-fade-in-up text-brand-600 text-[12px] font-medium tracking-[0.22em] uppercase">
           About
         </p>
-        <h1 className="animate-fade-in-up mt-5 text-5xl font-semibold tracking-tight text-ink [animation-delay:120ms] md:text-6xl">
+        <h1 className="animate-fade-in-up text-ink mt-5 text-5xl font-semibold tracking-tight [animation-delay:120ms] md:text-6xl">
           关于我
         </h1>
-        <p className="animate-fade-in-up mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-soft [animation-delay:240ms]">
+        <p className="animate-fade-in-up text-slate-soft mx-auto mt-6 max-w-2xl text-lg leading-relaxed [animation-delay:240ms]">
           热爱ps、pr、Ai、剪辑、拍摄、关注设计系统与用户体验，致力于用简洁优雅的设计方案创造可靠的数字设计产品。
         </p>
       </section>
 
       <section className="mx-auto w-full max-w-4xl px-5 pb-10">
         <Reveal>
-          <p className="text-center text-[15px] leading-relaxed text-slate-soft">
+          <p className="text-slate-soft text-center text-[15px] leading-relaxed">
             我是一名专注于数字媒体技术的设计者，擅长将创意与技术结合，在视觉、动效与性能之间找到平衡。
             这里沉淀了我的技术思考、学习笔记与作品。
           </p>
@@ -48,16 +48,13 @@ export default function AboutPage() {
           {skillGroups.map((group, index) => (
             <Reveal key={group.title} delay={index * 100}>
               <div className="glass card-lift h-full rounded-3xl p-7">
-                <p className="text-[13px] font-medium uppercase tracking-[0.18em] text-brand-600">
+                <p className="text-brand-600 text-[13px] font-medium tracking-[0.18em] uppercase">
                   {group.title}
                 </p>
                 <ul className="mt-5 space-y-3">
                   {group.items.map((item) => (
-                    <li
-                      key={item}
-                      className="flex items-center gap-3 text-[15px] text-ink"
-                    >
-                      <span className="h-1.5 w-1.5 rounded-full bg-brand-500/60" />
+                    <li key={item} className="text-ink flex items-center gap-3 text-[15px]">
+                      <span className="bg-brand-500/60 h-1.5 w-1.5 rounded-full" />
                       {item}
                     </li>
                   ))}
@@ -68,5 +65,5 @@ export default function AboutPage() {
         </div>
       </section>
     </>
-  );
+  )
 }

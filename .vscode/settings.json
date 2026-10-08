@@ -1,0 +1,87 @@
+{
+  // ============================================================
+  // Editor
+  // ============================================================
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "editor.tabSize": 2,
+  "editor.rulers": [100],
+  "editor.wordWrapColumn": 100,
+
+  // ============================================================
+  // File Nesting — 将关联文件折叠到父级文件下
+  // ============================================================
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    "*.ts": "$(capture).js, $(capture).d.ts, $(capture).*.ts",
+    "*.tsx": "$(capture).ts, $(capture).js, $(capture).d.ts, $(capture).module.css, $(capture).test.tsx, $(capture).stories.tsx",
+    "*.js": "$(capture).js.map, $(capture).min.js, $(capture).d.ts",
+    "*.css": "$(capture).css.map, $(capture).min.css",
+    "*.svg": "$(capture).png, $(capture).jpg, $(capture).jpeg, $(capture).webp",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, pnpm-workspace.yaml, .npmrc, .nvmrc, .node-version",
+    "tsconfig.json": "tsconfig.*.json",
+    "eslint.config.mjs": ".eslintignore, .eslintcache",
+    ".prettierrc": ".prettierignore",
+    ".gitignore": ".gitattributes, .gitmodules, .gitkeep",
+    "*.mdx": "$(capture).md",
+    "next.config.ts": "next-env.d.ts",
+    "postcss.config.mjs": "tailwind.config.*, tailwind.css"
+  },
+
+  // ============================================================
+  // Tailwind CSS IntelliSense（v4）
+  // ============================================================
+  "tailwindCSS.experimental.configFile": null,
+  "css.customData": [".vscode/tailwind.json"],
+  "scss.validate": false,
+  "css.validate": false,
+  "less.validate": false,
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+
+  // ============================================================
+  // File Excludes（搜索/资源管理器默认隐藏）
+  // ============================================================
+  "files.exclude": {
+    "**/.next": true,
+    "**/node_modules": true
+  },
+  "search.exclude": {
+    "**/.next": true,
+    "**/node_modules": true,
+    "pnpm-lock.yaml": true
+  },
+
+  // ============================================================
+  // TypeScript / JavaScript
+  // ============================================================
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+
+  // ============================================================
+  // 文件图标 / 颜色
+  // ============================================================
+  "workbench.colorCustomizations": {
+    "titleBar.activeBackground": "#0a0a0a",
+    "titleBar.activeForeground": "#fbfbfd",
+    "titleBar.inactiveBackground": "#1d1d1f",
+    "titleBar.inactiveForeground": "#6e6e73"
+  },
+
+  // ============================================================
+  // Emmet
+  // ============================================================
+  "emmet.includeLanguages": {
+    "postcss": "css"
+  }
+}
