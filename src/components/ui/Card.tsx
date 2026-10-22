@@ -18,7 +18,7 @@ interface UiCardProps {
 export default function UiCard({ href, title, description, tags = [] }: UiCardProps) {
   return (
     <Link href={href} className="block h-full no-underline">
-      <div className="card-lift hover:border-brand-500/25 h-full rounded-2xl border border-black/[0.08] bg-white/70 p-6 transition-colors hover:bg-white/90">
+      <div className="card-lift hover:border-brand-500/25 h-full rounded-2xl border border-black/8 bg-white/70 p-6 transition-colors hover:bg-white/90">
         <p className="text-ink mb-2 text-[17px] font-semibold tracking-tight">{title}</p>
         {description && (
           <p className="text-slate-soft mb-4 line-clamp-2 text-[13px] leading-relaxed">

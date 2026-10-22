@@ -6,13 +6,15 @@ interface VideoPlayerProps {
   src: string
   poster?: string
   title?: string
+  /** 视频宽高比类名，如 "aspect-video"。传入时以固定比例裁剪填充，保证卡片对齐。 */
+  aspect?: string
 }
 
 /**
  * 视频播放组件（客户端）。
  * 使用原生 <video>，preload="none" 按需加载媒体，避免阻塞首屏；失败时展示兜底提示。
  */
-export default function VideoPlayer({ src, poster, title }: VideoPlayerProps) {
+export default function VideoPlayer({ src, poster, title, aspect }: VideoPlayerProps) {
   const [error, setError] = useState(false)
 
   if (error) {
@@ -32,7 +34,7 @@ export default function VideoPlayer({ src, poster, title }: VideoPlayerProps) {
         src={src}
         poster={poster}
         onError={() => setError(true)}
-        className="w-full rounded-lg"
+        className={`w-full rounded-lg ${aspect ? 'bg-slate-950 object-cover ' + aspect : ''}`}
       >
         当前浏览器不支持视频播放。
       </video>

@@ -5,24 +5,25 @@ import { renderMdx } from '@/lib/content/render-mdx'
 import { buildPageMeta } from '@/lib/seo/meta'
 
 interface WorkDetailPageProps {
-  params: Promise<{ slug: string }>
+  params: Promise<{ slug: string[] }>
 }
 
-/** 静态生成所有作品详情页的动态路由参数 */
-export async function generateStaticParams(): Promise<Array<{ slug: string }>> {
-  return getAllWorksMeta().map((work) => ({ slug: work.slug }))
+/** 静态生成所有作品详情页的动态路由参数（层级 slug 拆分为多段） */
+export async function generateStaticParams(): Promise<Array<{ slug: string[] }>> {
+  return getAllWorksMeta().map((work) => ({ slug: work.slug.split('/') }))
 }
 
 export async function generateMetadata({ params }: WorkDetailPageProps): Promise<Metadata> {
   const { slug } = await params
-  const work = await getWorkBySlug(slug)
+  const slugPath = slug.join('/')
+  const work = await getWorkBySlug(slugPath)
   if (!work) {
     return {}
   }
   return buildPageMeta({
     title: work.title,
     description: work.description,
-    path: `/works/${slug}`,
+    path: `/works/${slugPath}`,
     type: 'article',
   })
 }
@@ -30,10 +31,12 @@ export async function generateMetadata({ params }: WorkDetailPageProps): Promise
 /**
  * 作品详情页（SSG）。
  * 服务端读取 mdx 源并编译渲染，支持文档内嵌入媒体、3D 模型等自定义组件。
+ * 路由层级与内容目录嵌套一一对应：content/works/xx/yy.mdx → /works/xx/yy。
  */
 export default async function WorkDetailPage({ params }: WorkDetailPageProps) {
   const { slug } = await params
-  const work = await getWorkBySlug(slug)
+  const slugPath = slug.join('/')
+  const work = await getWorkBySlug(slugPath)
   if (!work) {
     notFound()
   }

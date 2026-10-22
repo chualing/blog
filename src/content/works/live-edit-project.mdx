@@ -1,0 +1,101 @@
+---
+title: 视频剪辑
+description: 使用PR与剪映完成短视频卡点、漫剪、信息流短片剪辑, 学习节奏把控、调色与字幕包装.
+date: 2026-10-01
+tags:
+  - 剪映
+---
+
+<section>
+  <h2 className="text-ink text-2xl font-semibold tracking-tight">作品介绍</h2>
+  <div className="text-slate-soft mt-3 max-w-3xl text-[15px] leading-relaxed">
+    本作品为短视频剪辑练习，使用PR与剪映完成短视频卡点、漫剪、信息流短片剪辑，
+    在节奏把控、调色与字幕包装等方面逐步打磨，按类型整理如下，欢迎观看交流。
+  </div>
+</section>
+
+<section className="mt-12">
+  <h2 className="mb-6 text-2xl font-semibold tracking-tight text-ink">视频展示</h2>
+
+{/* 整体相册容器：毛玻璃外框，内部三栏等高排列 */}
+
+  <div className="glass rounded-3xl p-5 sm:p-6 md:p-8">
+    <div className="grid grid-cols-1 items-stretch gap-7 md:grid-cols-3">
+      {/* 信息流剪辑类 */}
+      <section className="flex h-full flex-col">
+        <header className="mb-5 pb-3">
+          <div className="flex items-center gap-2">
+            <span className="h-2 w-2 rounded-full bg-brand-500/70" />
+            <h3 className="text-lg font-semibold tracking-tight text-ink">信息流剪辑类</h3>
+          </div>
+          <p className="mt-1 min-h-10 pl-4 text-sm leading-snug text-slate-soft">突出引流逻辑与转场衔接</p>
+        </header>
+        <div className="flex flex-1 flex-col gap-5">
+          <figure className="flex h-full flex-col rounded-2xl border border-black/5 bg-white/80 p-4 shadow-sm">
+            <VideoPlayer title="信息流 · 引流" src="/media/live-infoflow.mp4" aspect="aspect-video" />
+            <figcaption className="mt-auto text-xs leading-relaxed text-slate-soft">信息流短片 · 转场与节奏</figcaption>
+          </figure>
+          <figure className="flex h-full flex-col rounded-2xl border border-black/5 bg-white/80 p-4 shadow-sm">
+            <VideoPlayer title="信息流 · 种草" src="/media/live-infoflow-2.mp4" aspect="aspect-video" />
+            <figcaption className="mt-auto text-xs leading-relaxed text-slate-soft">种草短片 · 卖点呈现</figcaption>
+          </figure>
+          <figure className="flex h-full flex-col rounded-2xl border border-black/5 bg-white/80 p-4 shadow-sm">
+            <VideoPlayer title="信息流 · 促销" src="/media/live-infoflow-3.mp4" aspect="aspect-video" />
+            <figcaption className="mt-auto text-xs leading-relaxed text-slate-soft">促销短片 · 紧迫感营造</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      {/* 口播剪辑类 */}
+      <section className="flex h-full flex-col">
+        <header className="mb-5 pb-3">
+          <div className="flex items-center gap-2">
+            <span className="h-2 w-2 rounded-full bg-violet-500/70" />
+            <h3 className="text-lg font-semibold tracking-tight text-ink">口播剪辑类</h3>
+          </div>
+          <p className="mt-1 min-h-10 pl-4 text-sm leading-snug text-slate-soft">商业口播讲解，磨炼节奏把控与字幕包装</p>
+        </header>
+        <div className="flex flex-1 flex-col gap-5">
+          <figure className="flex h-full flex-col rounded-2xl border border-black/5 bg-white/80 p-4 shadow-sm">
+            <VideoPlayer title="口播 · 产品介绍" src="/media/live-koubo-1.mp4" aspect="aspect-video" />
+            <figcaption className="mt-auto text-xs leading-relaxed text-slate-soft">产品口播 · 字幕排版</figcaption>
+          </figure>
+          <figure className="flex h-full flex-col rounded-2xl border border-black/5 bg-white/80 p-4 shadow-sm">
+            <VideoPlayer title="口播 · 干货分享" src="/media/live-koubo-2.mp4" aspect="aspect-video" />
+            <figcaption className="mt-auto text-xs leading-relaxed text-slate-soft">干货口播 · 信息层级</figcaption>
+          </figure>
+          <figure className="flex h-full flex-col rounded-2xl border border-black/5 bg-white/80 p-4 shadow-sm">
+            <VideoPlayer title="口播 · 品牌讲述" src="/media/live-koubo-3.mp4" aspect="aspect-video" />
+            <figcaption className="mt-auto text-xs leading-relaxed text-slate-soft">品牌口播 · 情绪渲染</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      {/* 卡点剪辑类 */}
+      <section className="flex h-full flex-col">
+        <header className="mb-5 pb-3">
+          <div className="flex items-center gap-2">
+            <span className="h-2 w-2 rounded-full bg-amber-500/70" />
+            <h3 className="text-lg font-semibold tracking-tight text-ink">卡点剪辑类</h3>
+          </div>
+          <p className="mt-1 min-h-10 pl-4 text-sm leading-snug text-slate-soft">音乐卡点漫剪，练习调色与节拍同步</p>
+        </header>
+        <div className="flex flex-1 flex-col gap-5">
+          <figure className="flex h-full flex-col rounded-2xl border border-black/5 bg-white/80 p-4 shadow-sm">
+            <VideoPlayer title="卡点 · 音乐漫剪" src="/media/live-kadian.mp4" aspect="aspect-video" />
+            <figcaption className="mt-auto text-xs leading-relaxed text-slate-soft">音乐卡点 · 节拍同步</figcaption>
+          </figure>
+          <figure className="flex h-full flex-col rounded-2xl border border-black/5 bg-white/80 p-4 shadow-sm">
+            <VideoPlayer title="卡点 · 燃向混剪" src="/media/live-kadian-2.mp4" aspect="aspect-video" />
+            <figcaption className="mt-auto text-xs leading-relaxed text-slate-soft">燃向混剪 · 节奏爆发</figcaption>
+          </figure>
+          <figure className="flex h-full flex-col rounded-2xl border border-black/5 bg-white/80 p-4 shadow-sm">
+            <VideoPlayer title="卡点 · 踩点竖屏" src="/media/live-kadian-3.mp4" aspect="aspect-video" />
+            <figcaption className="mt-auto text-xs leading-relaxed text-slate-soft">竖屏踩点 · 快切转场</figcaption>
+          </figure>
+        </div>
+      </section>
+    </div>
+
+  </div>
+</section>

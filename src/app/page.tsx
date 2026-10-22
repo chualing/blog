@@ -27,7 +27,7 @@ export default function HomePage() {
       <section className="relative overflow-hidden">
         <div
           aria-hidden
-          className="bg-brand-500/10 animate-float-slow pointer-events-none absolute -top-32 left-1/2 -z-10 h-[28rem] w-[48rem] -translate-x-1/2 rounded-full blur-3xl"
+          className="bg-brand-500/10 animate-float-slow pointer-events-none absolute -top-32 left-1/2 -z-10 h-112 w-3xl -translate-x-1/2 rounded-full blur-3xl"
         />
         <div
           aria-hidden

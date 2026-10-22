@@ -5,24 +5,25 @@ import { renderMdx } from '@/lib/content/render-mdx'
 import { buildPageMeta } from '@/lib/seo/meta'
 
 interface BlogPostPageProps {
-  params: Promise<{ slug: string }>
+  params: Promise<{ slug: string[] }>
 }
 
-/** 静态生成所有文章详情页的动态路由参数 */
-export async function generateStaticParams(): Promise<Array<{ slug: string }>> {
-  return getAllPostsMeta().map((post) => ({ slug: post.slug }))
+/** 静态生成所有文章详情页的动态路由参数（层级 slug 拆分为多段） */
+export async function generateStaticParams(): Promise<Array<{ slug: string[] }>> {
+  return getAllPostsMeta().map((post) => ({ slug: post.slug.split('/') }))
 }
 
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
   const { slug } = await params
-  const post = await getPostBySlug(slug)
+  const slugPath = slug.join('/')
+  const post = await getPostBySlug(slugPath)
   if (!post) {
     return {}
   }
   return buildPageMeta({
     title: post.title,
     description: post.description,
-    path: `/blog/${slug}`,
+    path: `/blog/${slugPath}`,
     type: 'article',
   })
 }
@@ -30,10 +31,12 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
 /**
  * 文章详情页（SSG）。
  * 服务端读取 mdx 源并编译渲染，兼顾爬虫抓取与自定义组件支持。
+ * 路由层级与内容目录嵌套一一对应：content/posts/xx/yy.mdx → /blog/xx/yy。
  */
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = await params
-  const post = await getPostBySlug(slug)
+  const slugPath = slug.join('/')
+  const post = await getPostBySlug(slugPath)
   if (!post) {
     notFound()
   }
