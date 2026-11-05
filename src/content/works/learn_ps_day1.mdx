@@ -138,40 +138,4 @@ tags:
   </div>
 </section>
 
-<dialog
-  id="lightbox"
-  className="fixed inset-0 m-auto h-screen max-h-none w-screen max-w-none bg-black/80 p-4 open:flex open:items-center open:justify-center sm:p-8"
->
-  <img
-    id="lightbox-img"
-    src={null}
-    alt=""
-    className="h-full max-h-none w-full max-w-none object-contain"
-  />
-</dialog>
-
-<script
-  dangerouslySetInnerHTML={{
-    __html: `(function () {
-      var dialog = document.getElementById('lightbox')
-      var lightboxImg = document.getElementById('lightbox-img')
-      var triggers = document.querySelectorAll('.js-lightbox-trigger')
-
-      function openLightbox(src, alt) {
-        lightboxImg.src = src || ''
-        lightboxImg.alt = alt || ''
-        dialog.showModal()
-      }
-
-      triggers.forEach(function (trigger) {
-        trigger.addEventListener('click', function () {
-          openLightbox(trigger.getAttribute('data-src'), trigger.getAttribute('data-alt'))
-        })
-      })
-
-      dialog.addEventListener('click', function (e) {
-        if (e.target === dialog) dialog.close()
-      })
-    })()`,
-  }}
-/>
+<Lightbox />

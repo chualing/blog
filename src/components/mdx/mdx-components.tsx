@@ -2,6 +2,7 @@ import MuiButton from '@mui/material/Button'
 import MuiLink from '@mui/material/Link'
 import Callout from '@/components/ui/Callout'
 import ImageGallery from '@/components/ui/ImageGallery'
+import Lightbox from '@/components/ui/Lightbox'
 import OptimizedImage from '@/components/media/OptimizedImage'
 import AudioPlayer from '@/components/media/AudioPlayer'
 import VideoPlayer from '@/components/media/VideoPlayer'
@@ -100,6 +101,7 @@ export const mdxComponents = {
   Link: MuiLink,
   Callout,
   ImageGallery,
+  Lightbox,
   OptimizedImage,
   AudioPlayer,
   VideoPlayer,
